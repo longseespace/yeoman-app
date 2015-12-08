@@ -68,7 +68,8 @@ function restart(obj) {
 gulp.task('watch', function () {
   glob.sync('./static/less/**/*.less').forEach(watchLess);
   glob.sync('./static/**/*.html').forEach(watchHtml);
-  glob.sync('./src/browser/**/*.js').forEach(watchBrowser);
+  // glob.sync('./src/browser/**/*.js').forEach(watchBrowser);
+  // glob.sync('./menus/*.json').forEach(watchBrowser);
   glob.sync('./src/renderer/**/*.js').forEach(watchRenderer);
 });
 function watchLess(file) {

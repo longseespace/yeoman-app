@@ -1,13 +1,13 @@
 {
-  "name": "yeoman-app",
+  "name": "airman-app",
   "productName": "Airman",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "appBundleId": "tv.inair.airman",
   "helperBundleId": "tv.inair.airman.helper",
   "description": "An app made with Electron that scaffolds InAiR projects using Yeoman",
-  "author": "The Yeoman Team",
+  "author": "Long Nguyen <long@seespace.co>",
   "main": "src/browser/main.js",
-  "bugs": "https://github.com/yeoman/yeoman-app/issues",
+  "bugs": "https://github.com/longseespace/yeoman-app/issues",
   "dependencies": {
     "array.prototype.findindex": "^1.0.0",
     "async": "^1.2.1",
@@ -47,7 +47,7 @@
     "electron-compilers": "^1.0.1",
     "electron-connect": "^0.3.3",
     "electron-packager": "^5.0.1",
-    "electron-prebuilt": "0.33.7",
+    "electron-prebuilt": "^0.35.4",
     "eslint": "^1.10.2",
     "eslint-plugin-react": "^3.10.0",
     "gulp": "^3.9.0",
@@ -71,6 +71,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yeoman/yeoman-app"
+    "url": "https://github.com/longseespace/yeoman-app"
   }
 }

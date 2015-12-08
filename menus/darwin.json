@@ -5,7 +5,7 @@
       "submenu": [
         {
           "label": "About <%= productName %>",
-          "command": "application:about"
+          "role": "about"
         },
         {
           "type": "separator"
@@ -19,9 +19,55 @@
           "type": "separator"
         },
         {
+          "label": "Services",
+          "role": "services",
+          "submenu": []
+        },
+        {
+          "type": "separator"
+        },
+        {
           "label": "Quit",
           "command": "application:quit",
           "accelerator": "Command+Q"
+        }
+      ]
+    },
+    {
+      "label": "Edit",
+      "submenu": [
+        {
+          "label": "Undo",
+          "accelerator": "Command+Z",
+          "role": "undo"
+        },
+        {
+          "label": "Redo",
+          "accelerator": "Shift+Command+Z",
+          "role": "redo"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "Cut",
+          "accelerator": "Command+X",
+          "role": "cut"
+        },
+        {
+          "label": "Copy",
+          "accelerator": "Command+C",
+          "role": "copy"
+        },
+        {
+          "label": "Paste",
+          "accelerator": "Command+V",
+          "role": "paste"
+        },
+        {
+          "label": "Select All",
+          "accelerator": "Command+A",
+          "role": "selectall"
         }
       ]
     },
