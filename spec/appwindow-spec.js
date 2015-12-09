@@ -157,7 +157,7 @@ describe('AppWindow', function () {
       this.appWindow.on = this.sandbox.stub();
       this.appWindow.handleEvents();
 
-      assert(this.appWindow.on.calledWithMatch('generator-cancel'));
+      assert(this.appWindow.on.calledWithMatch('generator:cancel'));
       assert(this.appWindow.on.calledWithMatch('open-dialog'));
       assert(this.appWindow.on.calledWithMatch('generator:done'));
     });
