@@ -1,7 +1,7 @@
 {
   "name": "airman-app",
   "productName": "Airman",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "appBundleId": "tv.inair.airman",
   "helperBundleId": "tv.inair.airman.helper",
   "description": "An app made with Electron that scaffolds InAiR projects using Yeoman",
