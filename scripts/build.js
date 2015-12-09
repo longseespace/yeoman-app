@@ -22,7 +22,7 @@ var packagerOptions = {
   'app-bundle-id': pkg.appBundleId,
   'helper-bundle-id': pkg.helperBundleId,
   version: pkg.devDependencies['electron-prebuilt'],
-  asar: false,
+  asar: true,
   prune: true,
   dir: '.',
   ignore: [
