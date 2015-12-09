@@ -71,6 +71,7 @@ gulp.task('watch', function () {
   // glob.sync('./src/browser/**/*.js').forEach(watchBrowser);
   // glob.sync('./menus/*.json').forEach(watchBrowser);
   glob.sync('./src/renderer/**/*.js').forEach(watchRenderer);
+  glob.sync('./src/renderer/**/*.jsx').forEach(watchRenderer);
 });
 function watchLess(file) {
   gulp.watch(file, ['less']);

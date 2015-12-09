@@ -3,9 +3,12 @@ import ipc from 'ipc';
 import {
   GENERATOR_INSTALLED_GENERATORS,
   GENERATOR_PROMPT_QUESTIONS,
+  GENERATOR_DIFF,
   GENERATOR_INSTALL,
   GENERATOR_DONE,
-  FOLDER_SELECTED
+  FOLDER_SELECTED,
+  NAVIGATE_HOME,
+  NAVIGATE_BACK
 } from '../actions/action-types';
 
 import * as BrowserActions from '../actions/browser-actions';
@@ -14,9 +17,12 @@ import * as BrowserActions from '../actions/browser-actions';
 const BrowserEvents = {
   [GENERATOR_INSTALLED_GENERATORS]: 'generatorsDataReceived',
   [GENERATOR_PROMPT_QUESTIONS]: 'questionPrompt',
+  [GENERATOR_DIFF]: 'diff',
   [GENERATOR_INSTALL]: 'generatorInstall',
   [GENERATOR_DONE]: 'generatorDone',
-  [FOLDER_SELECTED]: 'folderSelected'
+  [FOLDER_SELECTED]: 'folderSelected',
+  [NAVIGATE_HOME]: 'navigateHome',
+  [NAVIGATE_BACK]: 'navigateBack'
 };
 
 export default function ({ dispatch }) {

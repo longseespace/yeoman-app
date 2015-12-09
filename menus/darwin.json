@@ -72,6 +72,21 @@
       ]
     },
     {
+      "label": "Navigate",
+      "submenu": [
+        {
+          "label": "Home",
+          "accelerator": "Shift+Command+H",
+          "command": "navigate:home"
+        },
+        {
+          "label": "Back",
+          "accelerator": "Command+[",
+          "command": "navigate:back"
+        }
+      ]
+    },
+    {
       "label": "View",
       "submenu": [
         {

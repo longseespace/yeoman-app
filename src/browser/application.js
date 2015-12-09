@@ -126,6 +126,14 @@ class Application extends EventEmitter {
       });
     });
 
+    this.menu.on('navigate:home', () => {
+      return appWindow.sendCommandToBrowserWindow('navigate:home');
+    });
+
+    this.menu.on('navigate:back', () => {
+      return appWindow.sendCommandToBrowserWindow('navigate:back');
+    });
+
     if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
       const client = require('electron-connect').client;
       client.create(appWindow);

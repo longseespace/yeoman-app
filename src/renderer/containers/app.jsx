@@ -36,7 +36,8 @@ const App = React.createClass({
       selectedGenerator,
       actualFormType,
       questions,
-      isLoading
+      isLoading,
+      diffData
     } = generator;
 
     const filter = (g) => g.name.indexOf('inair') > -1;
@@ -81,6 +82,7 @@ const App = React.createClass({
           <PromptForm
             generator={selectedGenerator}
             questions={questions}
+            diffData={diffData}
             type={actualFormType}
             selectedFolder={selectedFolder}
             selectFolder={PromptFormActions.selectFolder}

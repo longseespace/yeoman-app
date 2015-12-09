@@ -70,7 +70,7 @@ AppWindow.prototype.handleEvents = function () {
     this.emit('closed', e);
   }.bind(this));
 
-  this.on('generator-cancel', this.killYoProcess);
+  this.on('generator:cancel', this.killYoProcess);
   this.on('open-dialog', this.selectTargetDirectory);
   this.on('generator:done', this.openProject);
 };
@@ -112,16 +112,26 @@ AppWindow.prototype.initYoProcess = function () {
 
   }.bind(this));
 
+  this.yoProcess.on('exit', function (code, signal) {
+    if (signal === 'SIGKILL') {
+      this.initYoProcess();
+    }
+
+  }.bind(this));
+
   this.sendCommandToProcess('generator:init');
 };
 
 AppWindow.prototype.killYoProcess = function () {
   if (this.yoProcess && this.yoProcess.pid) {
+    console.log('APP Killing yo process ' + this.yoProcess.pid);
     killChildProcess(this.yoProcess.pid, function (err) {
       if (err) {
         console.log(err);
+        return;
       }
-    });
+      this.yoProcess = null;
+    }.bind(this));
   }
 };
 

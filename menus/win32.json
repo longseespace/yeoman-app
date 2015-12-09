@@ -18,6 +18,59 @@
       ]
     },
     {
+      "label": "Edit",
+      "submenu": [
+        {
+          "label": "Undo",
+          "accelerator": "Control+Z",
+          "role": "undo"
+        },
+        {
+          "label": "Redo",
+          "accelerator": "Shift+Control+Z",
+          "role": "redo"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "Cut",
+          "accelerator": "Control+X",
+          "role": "cut"
+        },
+        {
+          "label": "Copy",
+          "accelerator": "Control+C",
+          "role": "copy"
+        },
+        {
+          "label": "Paste",
+          "accelerator": "Control+V",
+          "role": "paste"
+        },
+        {
+          "label": "Select All",
+          "accelerator": "Control+A",
+          "role": "selectall"
+        }
+      ]
+    },
+    {
+      "label": "Navigate",
+      "submenu": [
+        {
+          "label": "Home",
+          "accelerator": "Shift+Control+H",
+          "command": "navigate:home"
+        },
+        {
+          "label": "Back",
+          "accelerator": "Control+[",
+          "command": "navigate:back"
+        }
+      ]
+    },
+    {
       "label": "&View",
       "submenu": [
         {
