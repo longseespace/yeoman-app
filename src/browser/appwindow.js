@@ -113,11 +113,20 @@ AppWindow.prototype.initYoProcess = function () {
   }.bind(this));
 
   this.yoProcess.on('exit', function (code, signal) {
+
     if (signal === 'SIGKILL') {
       this.initYoProcess();
+      this.sendCommandToBrowserWindow('debug', { yo: this.yoProcess, code: code, signal: signal });
     }
 
   }.bind(this));
+
+  this.yoProcess.on('error', function (error) {
+    this.sendCommandToBrowserWindow('debug', { yo: this.yoProcess, error: error });
+  }.bind(this));
+
+  this.sendCommandToBrowserWindow('debug', { yo: this.yoProcess });
+  this.emitCommandToAppWindow('debug', { yo: this.yoProcess });
 
   this.sendCommandToProcess('generator:init');
 };

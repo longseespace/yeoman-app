@@ -6,7 +6,8 @@ import {
   GENERATOR_DONE,
   FOLDER_SELECTED,
   NAVIGATE_HOME,
-  NAVIGATE_BACK
+  NAVIGATE_BACK,
+  DEBUG
 } from './action-types';
 
 import insight from '../utils/insight.js';
@@ -67,5 +68,12 @@ export function navigateBack() {
   ipc.send('context-appwindow', 'generator:cancel');
   return {
     type: NAVIGATE_BACK
+  };
+}
+
+export function debug(data) {
+  console.debug(data);
+  return {
+    type: DEBUG
   };
 }

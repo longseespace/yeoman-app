@@ -8,7 +8,6 @@ var env = null;
 
 function sendCommandToAppWindow(name, data) {
   if (data instanceof Error) {
-    console.error(data);
     data = data.toString();
   }
   process.send({
@@ -53,7 +52,10 @@ function getGenerators() {
 function init() {
   env = environment();
 
+  sendCommandToAppWindow('debug', { fn: 'init()', env: env });
+
   env.lookup(function () {
+    sendCommandToAppWindow('debug', { fn: 'init().env.lookup()', generators: getGenerators() });
     sendCommandToAppWindow('generator:installed-generators', getGenerators());
   });
 }
@@ -102,12 +104,13 @@ var api = {
 };
 
 process.on('message', function (msg) {
-  console.log('YO-Process', msg);
+
+  sendCommandToAppWindow('debug', { fn: 'onMessage()', msg: msg });
 
   var action = api[msg.action];
   if (action) {
     action.apply(null, msg.args);
   } else {
-    console.warn('No action "%s" in api found', msg.action);
+    // console.warn('No action "%s" in api found', msg.action);
   }
 });

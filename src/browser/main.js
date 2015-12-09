@@ -28,4 +28,3 @@ app.on('window-all-closed', function () {
     app.quit();
   }
 });
-

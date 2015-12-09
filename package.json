@@ -63,6 +63,7 @@
   },
   "scripts": {
     "start": "electron . -r",
+    "startProd": "electron .",
     "test": "scripts/test.js",
     "pretest": "npm run lint",
     "lint": "eslint --ext=js --ext=jsx src spec",

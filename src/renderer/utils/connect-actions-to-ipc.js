@@ -8,7 +8,8 @@ import {
   GENERATOR_DONE,
   FOLDER_SELECTED,
   NAVIGATE_HOME,
-  NAVIGATE_BACK
+  NAVIGATE_BACK,
+  DEBUG
 } from '../actions/action-types';
 
 import * as BrowserActions from '../actions/browser-actions';
@@ -22,7 +23,8 @@ const BrowserEvents = {
   [GENERATOR_DONE]: 'generatorDone',
   [FOLDER_SELECTED]: 'folderSelected',
   [NAVIGATE_HOME]: 'navigateHome',
-  [NAVIGATE_BACK]: 'navigateBack'
+  [NAVIGATE_BACK]: 'navigateBack',
+  [DEBUG]: 'debug'
 };
 
 export default function ({ dispatch }) {

@@ -12,3 +12,5 @@ export const SUBMIT_SELECTED_FOLDER = 'submit-selected-folder';
 
 export const NAVIGATE_HOME = 'navigate:home';
 export const NAVIGATE_BACK = 'navigate:back';
+
+export const DEBUG = 'debug';

@@ -22,7 +22,7 @@ var packagerOptions = {
   'app-bundle-id': pkg.appBundleId,
   'helper-bundle-id': pkg.helperBundleId,
   version: pkg.devDependencies['electron-prebuilt'],
-  asar: true,
+  asar: false,
   prune: true,
   dir: '.',
   ignore: [
@@ -33,7 +33,8 @@ var packagerOptions = {
 
 // Supported platforms and platfrom specific options
 var tasks = [
-  { platform: 'darwin', arch: 'x64', icon: 'app.icns' }
+  { platform: 'darwin', arch: 'x64', icon: 'app.icns' },
+  { platform: 'win32', arch: 'x64', icon: 'app.ico' }
 ].map(function (item) {
   return _.assign({}, item, packagerOptions, {
     icon: path.join(resPath, item.icon),

@@ -37,6 +37,8 @@ class Application extends EventEmitter {
     let newWindow;
     let { test } = options;
 
+    console.log('openWithOptions', options);
+
     if (test) {
       if (options.exitWhenDone === undefined) {
         options.exitWhenDone = true;
