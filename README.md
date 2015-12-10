@@ -8,9 +8,9 @@ Airman is a desktop app that scaffolds InAiR projects using Yeoman.
 Download
 --------
 
-* [OS X](https://download.inair.tv/airman/airman-osx-v0.1.2.zip)
-* [Window x64]()
-* [Window x86]()
+* [OS X x64](https://download.inair.tv/airman/airman-osx-v0.1.2.zip)
+* [Window x64](https://download.inair.tv/airman/airman-win32-x64-v0.1.2.zip)
+* [Window i386](https://download.inair.tv/airman/airman-win32-i386-v0.1.2.zip)
 
 Usages
 ------
