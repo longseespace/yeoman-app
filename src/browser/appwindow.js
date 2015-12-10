@@ -114,9 +114,10 @@ AppWindow.prototype.initYoProcess = function () {
 
   this.yoProcess.on('exit', function (code, signal) {
 
-    if (signal === 'SIGKILL') {
+    console.log('yo killed ', this.yoProcess.userKilled, code, signal);
+
+    if (this.yoProcess.userKilled) {
       this.initYoProcess();
-      this.sendCommandToBrowserWindow('debug', { yo: this.yoProcess, code: code, signal: signal });
     }
 
   }.bind(this));
@@ -139,7 +140,7 @@ AppWindow.prototype.killYoProcess = function () {
         console.log(err);
         return;
       }
-      this.yoProcess = null;
+      this.yoProcess.userKilled = true;
     }.bind(this));
   }
 };
